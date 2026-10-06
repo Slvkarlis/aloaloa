@@ -158,21 +158,21 @@ function animateGauge(ctx, start, end, max, colorA, colorB) {
   }, 15);
 }
 
-drawGauge(tempCtx, 0, 50, "#f59e0b", "#ef4444");
-drawGauge(humCtx, 0, 100, "#38bdf8", "#6366f1");
+drawGauge(tempCtx, 0, 50, "#fb923c", "#f43f5e");
+drawGauge(humCtx, 0, 100, "#a78bfa", "#38bdf8");
 
 onValue(sensorRef, (snapshot) => {
   const data = snapshot.val();
   if (!data) return;
   if (typeof data.temperature === "number") {
     tempVal.innerHTML = data.temperature.toFixed(1) + "<span>&deg;C</span>";
-    animateGauge(tempCtx, currentTemp, data.temperature, 50, "#f59e0b", "#ef4444");
+    animateGauge(tempCtx, currentTemp, data.temperature, 50, "#fb923c", "#f43f5e");
     currentTemp = data.temperature;
     tempUpdated.textContent = fmtTime();
   }
   if (typeof data.humidity === "number") {
     humVal.innerHTML = data.humidity.toFixed(1) + "<span>%</span>";
-    animateGauge(humCtx, currentHum, data.humidity, 100, "#38bdf8", "#6366f1");
+    animateGauge(humCtx, currentHum, data.humidity, 100, "#a78bfa", "#38bdf8");
     currentHum = data.humidity;
     humUpdated.textContent = fmtTime();
   }
