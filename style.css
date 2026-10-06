@@ -136,10 +136,11 @@ header{
 .bulb-wrap{position:relative;width:78px;height:78px;margin-bottom:16px;}
 .bulb-glow{
   position:absolute;inset:0;border-radius:50%;
-  background:radial-gradient(circle, rgba(250,204,21,0.6), transparent 70%);
   opacity:0; transition:opacity .35s ease;
 }
 .bulb-glow.on{opacity:1;}
+#bulbGlow{background:radial-gradient(circle, rgba(74,222,128,0.65), transparent 70%);}
+#bulbGlow2{background:radial-gradient(circle, rgba(239,68,68,0.65), transparent 70%);}
 .bulb-wrap svg{position:relative;width:78px;height:78px;transition:filter .3s ease;}
 #bulbFill{transition:fill .3s ease;}
 #bulbFill2{transition:fill .3s ease;}

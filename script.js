@@ -46,8 +46,8 @@ function updateStatus(val) {
     return;
   }
   etatLed.textContent = on ? "LED allumée" : "LED éteinte";
-  etatLed.style.color = on ? "#34d399" : "#e7ecf5";
-  bulbFill.setAttribute("fill", on ? "#facc15" : "#334155");
+  etatLed.style.color = on ? "#4ade80" : "#e7ecf5";
+  bulbFill.setAttribute("fill", on ? "#4ade80" : "#2a1f3d");
   bulbGlow.classList.toggle("on", on);
   ledToggle.checked = on;
   ledUpdated.textContent = fmtTime();
@@ -72,8 +72,8 @@ onValue(ledRef2, (snapshot) => {
   const val = snapshot.val();
   const on = val === true || val === "true";
   etatLed2.textContent = val === null ? "Aucune valeur" : (on ? "LED allumée" : "LED éteinte");
-  etatLed2.style.color = on ? "#34d399" : "#e7ecf5";
-  bulbFill2.setAttribute("fill", on ? "#facc15" : "#334155");
+  etatLed2.style.color = on ? "#ef4444" : "#e7ecf5";
+  bulbFill2.setAttribute("fill", on ? "#ef4444" : "#2a1f3d");
   bulbGlow2.classList.toggle("on", on);
   ledToggle2.checked = on;
 });
